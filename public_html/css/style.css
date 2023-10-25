@@ -613,7 +613,7 @@ a:focus {
 .contact_section .form_container input {
   width: 100%;
   border: none;
-  height: 50px;
+  height: 75px;
   margin-bottom: 25px;
   padding-left: 15px;
   outline: none;
@@ -858,6 +858,143 @@ a:focus {
   border-color: #00004E;
 }
 
+/*INF. MI PERFIL*/
+.client_section_profile .carousel-control-next {
+  left: center;
+}
+
+.contact_section_profile .dropdown {
+  margin: 10px;
+  background-color:#FF9800;
+  color: #00004E;
+  width: 250px;
+}
+
+.contact_section_profile .dropdown_list:has(:checked){
+  --rows: 1fr;
+}
+
+.contact_section_profile .dropdown_link{
+  display: flex;
+  align-items: center;
+  gap: .6em;
+  color: #00004E;
+  padding: 1em .7em;
+  text-decoration: none;
+  border-radius: 6px;
+  position: relative;
+}
+
+.contact_section_profile .dropdown_check{
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.contact_section_profile .dropdown_content{
+  display: grid;
+  grid-template-rows: var(--rows, 0fr);
+  transition: .3s grid-template-rows;
+}
+
+.contact_section_profile .dropdown_sub{
+  overflow: hidden;
+}
+
+.contact_section_profile .dropdown_li{
+  margin-left: auto;
+  width: 85%;
+  list-style: none;
+}
+
+.contact_section_profile .dropdown_anchor{
+  padding: 1em 0;
+  color: #00004E;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* .contact_section_profile .img-box {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: auto;
+  position: relative; top: -120px;
+} */
+
+.contact_section_profile {
+  position: relative;
+  background-color: #00276C;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.contact_section_profile .heading_container {
+  margin-bottom: 25=px;
+}
+
+.contact_section_profile .heading_container h2 { 
+  text-transform: uppercase;
+  left: 45%;
+}
+
+.contact_section_profile .form_container_profile input {
+  position: relative; left: 27%;
+  width: 45%;
+  border: none;
+  height: 60px;
+  margin-bottom: 25px;
+  padding-left: 15px;
+  outline: none;
+  color: #101010;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+.contact_section_profile .form_container_profile input::-webkit-input-placeholder {
+  color: #333;
+  padding: 20px 45px 20px 20px;
+}
+
+.contact_section_profile .form_container_profile input:-ms-input-placeholder {
+  color: #333;
+}
+
+.contact_section_profile .form_container_profile input::-ms-input-placeholder {
+  color: #333;
+}
+
+.contact_section_profile .form_container_profile input::placeholder {
+  color: #333;
+}
+
+.contact_section_profile .form_container_profile input.message-box_profile {
+  height: 120px;
+}
+
+.contact_section_profile .form_container_profile button {
+  position: relative; left: 43%;
+  border: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 55px;
+  background-color: #FF9800;
+  color: #00004E;
+  border-radius: 0px;
+  border: 1px solid #5B7DCF;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.contact_section_profile .form_container_profile button:hover {
+  
+  align-items: center;
+  background-color: transparent;
+  color: #FF9800;
+}
+/* FIN INF. MI PERFIL*/
+
 /* footer section*/
 .footer_section {
   position: relative;
@@ -874,3 +1011,34 @@ a:focus {
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+
+/* search box for the restaurants */
+.search-box {
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box input {
+  padding: 10px;
+  padding-right: 35px;
+  width: 45%;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #5B7DCF;
+  outline: none;
+}
+
+.search-box button {
+  background-color:#FF9800;
+  padding: 10px 15px;
+  position: relative;
+  border: 0;
+  right: 0;
+  bottom: 0; 
+  right: 0;
+  border-radius: 0 5px 5px 0;
+  color:#00004E;
+  cursor: pointer;
+}
+/* end search box for the restaurants */
