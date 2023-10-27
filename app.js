@@ -22,7 +22,8 @@ http.createServer((req, res) => {
         '/',
         '/login',
         '/principaluser',
-        '/register'
+        '/register',
+        '/perfil'
     ];
 
     if (req.method === 'POST') {
@@ -81,8 +82,8 @@ http.createServer((req, res) => {
                     `);
 
                     if (result.recordset.length > 0) {
-                        res.writeHead(200, { 'Content-Type': 'text/plain' });
-                        res.end('Autenticación exitosa!');
+                        res.writeHead(302, { 'Location': '/principaluser.html' });
+                        res.end();
                     } else {
                         res.writeHead(401, { 'Content-Type': 'text/plain' });
                         res.end('Correo o contraseña incorrectos');
