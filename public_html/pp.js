@@ -1,3 +1,57 @@
+try {
+    request.input('Nombre', sql.NVarChar, postData.name);
+    request.input('Email', sql.NVarChar, postData.email);
+    request.input('Contraseña', sql.NVarChar, postData.password);
+    request.input('Dpi', sql.NVarChar, postData.dpi);
+    request.input('Telefono', sql.NVarChar, postData.telefono);
+
+    await request.query(query);
+
+    res.writeHead(302, { 
+        'Location': '/login.html' 
+    });
+    res.end();
+} catch (error) {
+    console.error("Error al insertar en la base de datos:", error);
+    res.writeHead(500, { 'Content-Type': 'text/plain' });
+    res.end('Error interno del servidor');
+}
+
+else if (req.url === '/login') {
+    try {
+        const pool = await db.getConnection();
+        const request = pool.request();
+        request.input('Email', sql.NVarChar, postData.email);
+        request.input('Contraseña', sql.NVarChar, postData.password);
+
+        const result = await request.query(`
+            SELECT * 
+            FROM Usuario 
+            WHERE Email = @Email AND Contraseña = @Contraseña
+        `);
+
+        if (result.recordset.length > 0) {
+            res.writeHead(200, { 'Content-Type': 'text/plain' });
+            res.end('Autenticación exitosa!');
+        } else {
+            res.writeHead(401, { 'Content-Type': 'text/plain' });
+            res.end('Correo o contraseña incorrectos');
+        }
+    } catch (error) {
+        console.error("Error al consultar en la base de datos:", error);
+        res.writeHead(500, { 'Content-Type': 'text/plain' });
+        res.end('Error interno del servidor');
+    }
+}
+
+
+
+
+
+
+
+
+
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
@@ -100,3 +154,40 @@ http.createServer((req, res) => {
 }).listen(8282);
 
 console.log('Servidor iniciado...');
+
+
+
+
+-------------
+<div class="col-md-6">
+    <div class="login-options">
+        <div class="login-options">
+          <div class="register-section">
+            <h2>Datos de la Empresa</h2>
+              <form id="registrationForm" method="POST" action="/registerComercio">
+                <div class="textbox">
+                  <input type="text" name="name" placeholder="Nombre del comercio" id="name" required>
+                </div>
+                <div class="textbox">
+                  <input type="telefono" name="telefono" placeholder="Telefono" id="telefono" required>
+                </div>
+                <div class="textbox">
+                  <input type="direccion" name="direccion" placeholder="Direccion comercial" id="direccion" required>
+                </div>
+                <div class="textbox">
+                  <input type="patente" name="patente" placeholder="Patente de Comercio" id="password" required>
+                </div>
+                <div class="textbox">
+                  <input type="nit" name="nit" placeholder="No. de NIT" id="nit" required>
+                </div>
+                <div class="textbox">
+                  <input type="des" name="des" placeholder="Descripción del negocio" id="des" required>
+                </div>
+              </form> 
+              
+            </div>
+          </div>
+          <input type="submit" class="btn centered" value="Registrarse">
+  
+        </div>
+</div>  
