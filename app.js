@@ -150,8 +150,8 @@ http.createServer((req, res) => {
                         res.writeHead(302, { 'Location': '/principaluser.html' });
                         res.end();
                     } else {
-                        res.writeHead(401, { 'Content-Type': 'text/plain' });
-                        res.end('Correo o contraseña incorrectos');
+                        res.writeHead(302, { 'Location': '/error.html' });
+                        res.end();
                     }
                 } catch (error) {
                 
