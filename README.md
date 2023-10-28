@@ -16,7 +16,7 @@ Soporte técnico: la aplicación brinda asistencia las 24 horas del día los 7 d
 Ofertas y descuentos: diferentes descuentos especiales que te permitan ahorrar y disfrutar mejor cada una de tus experiencias.
 
 TECNOLOGIA UTILIZADA
-
+********************
 /ReservagoApp
 │
 ├── /node_modules           # Dependencias del proyecto (generadas por npm)
