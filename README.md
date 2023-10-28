@@ -1,3 +1,12 @@
+¿QUE ES RESERVAGO?
+
+¿Has visitado algun comercio y cuando llegas te das cuenta que esta lleno? En reservago puedes buscar, visualizar y reservar tus sitios para que nunca más tengas que esperar por un lugar o servicio.
+
+![LOGOAR](https://github.com/CodeMasterGT/Reservago/assets/140135315/25111a47-56b4-4f33-a3be-98ccee75aedf)
+
+
+TECNOLOGIA UTILIZADA
+
 /ReservagoApp
 │
 ├── /node_modules           # Dependencias del proyecto (generadas por npm)
