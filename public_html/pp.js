@@ -156,38 +156,3 @@ http.createServer((req, res) => {
 console.log('Servidor iniciado...');
 
 
-
-
--------------
-<div class="col-md-6">
-    <div class="login-options">
-        <div class="login-options">
-          <div class="register-section">
-            <h2>Datos de la Empresa</h2>
-              <form id="registrationForm" method="POST" action="/registerComercio">
-                <div class="textbox">
-                  <input type="text" name="name" placeholder="Nombre del comercio" id="name" required>
-                </div>
-                <div class="textbox">
-                  <input type="telefono" name="telefono" placeholder="Telefono" id="telefono" required>
-                </div>
-                <div class="textbox">
-                  <input type="direccion" name="direccion" placeholder="Direccion comercial" id="direccion" required>
-                </div>
-                <div class="textbox">
-                  <input type="patente" name="patente" placeholder="Patente de Comercio" id="password" required>
-                </div>
-                <div class="textbox">
-                  <input type="nit" name="nit" placeholder="No. de NIT" id="nit" required>
-                </div>
-                <div class="textbox">
-                  <input type="des" name="des" placeholder="Descripción del negocio" id="des" required>
-                </div>
-              </form> 
-              
-            </div>
-          </div>
-          <input type="submit" class="btn centered" value="Registrarse">
-  
-        </div>
-</div>  

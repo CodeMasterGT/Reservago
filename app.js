@@ -154,9 +154,7 @@ http.createServer((req, res) => {
                         res.end('Correo o contraseña incorrectos');
                     }
                 } catch (error) {
-                    <div class="alert alert-danger" role="alert">
-                      Ha ocurrido un error durante el registro. Intente nuevamente.
-                    </div>
+                
                     console.error("Error al consultar en la base de datos:", error);
                     res.writeHead(500, { 'Content-Type': 'text/plain' });
                     res.end('Error interno del servidor');
