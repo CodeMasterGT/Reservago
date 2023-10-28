@@ -89,107 +89,84 @@
 
   <!-- furniture section -->
 
-
-  <section style="background-color: #eee;">
-    <div class="container py-5">
-
-      
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="card mb-4">
-            <div class="card-body text-center">
-              
-              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
-                class="rounded-circle img-fluid" style="width: 150px;">
-              <h5 class="my-3" tex="backround-color: #00004E">Kevin Quiix</h5>
-              <p class="text-muted mb-1">Profesion</p>
-              <p class="text-muted mb-4">Direccion</p>
-              <div class="d-flex justify-content-center mb-2">
-                <button type="button" class="btn btn-primary">Cambiar Foto</button>
-                
-              </div>
-            </div>
+  <section class="p-4 p-md-5" >
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-5">
+      <div class="card rounded-3">
+        <div class="card-body p-4">
+          <div class="text-center mb-4">
+            <h3>Ajustes</h3>
+            <h6>Pago</h6>
           </div>
-        
+          <form action="">
+            <p class="fw-bold mb-4 pb-2">Tarjetas guardadas:</p>
 
-          <div class="card mb-4 mb-lg-0">
-            <div class="card-body p-0">
-              <ul class="list-group list-group-flush rounded-3">
-                
-                <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                  <i class="fab fa-github fa-lg" style="color: #333333;"></i>
-                  <a href="perfil.html">Mis Datos ---> </a>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                  <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
-                  <a href=" ">Mis Reservas ---> </a> <!--colocar url-->
-                </li>
-                </li>
-              </ul>
+            <div class="d-flex flex-row align-items-center mb-4 pb-1">
+              <img class="img-fluid" src="https://img.icons8.com/color/48/000000/mastercard-logo.png" />
+              <div class="flex-fill mx-3">
+                <div class="form-outline">
+                  <input type="text" id="formControlLgXc" class="form-control form-control-lg"
+                    value="**** **** **** 3193" />
+                  <label class="form-label" for="formControlLgXc">Numero de Tarjeta</label>
+                </div>
+              </div>
+              <a href="#!">Eliminar Tarjeta</a>
             </div>
-          </div>
-        </div>
 
-     
-       
-        <div class="col-lg-8">
-          <div class="card mb-4">
-            <h5>Datos personales</h5>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-sm-3">
-                  <p class="mb-0">Nombre</p>
-                </div>
-                <div class="col-sm-9">
-                  <p class="text-muted mb-0">Kevin Quiix </p>
+            <div class="d-flex flex-row align-items-center mb-4 pb-1">
+              <img class="img-fluid" src="https://img.icons8.com/color/48/000000/visa.png" />
+              <div class="flex-fill mx-3">
+                <div class="form-outline">
+                  <input type="text" id="formControlLgXs" class="form-control form-control-lg"
+                    value="**** **** **** 4296" />
+                  <label class="form-label" for="formControlLgXs">Numero de tarjeta</label>
                 </div>
               </div>
-              <hr>
+              <a href="#!">Eliminar Tarjeta</a>
+            </div>
 
-              <div class="row">
-                <div class="col-sm-3">
-                  <p class="mb-0">Email</p>
-                </div>
-                <div class="col-sm-9">
-                  <p class="text-muted mb-0">example@example.com</p>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-sm-3">
-                  <p class="mb-0">Telefono</p>
-                </div>
-                <div class="col-sm-9">
-                  <p class="text-muted mb-0">(502)          </p>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-sm-3">
-                  <p class="mb-0">No. de DPI</p>
-                </div>
-                <div class="col-sm-9">
-                  <p class="text-muted mb-0">---- ----- ----</p>
+            <p class="fw-bold mb-4">Agregar Tarjeta:</p>
+
+            <div class="form-outline mb-4">
+              <input type="text" id="formControlLgXsd" class="form-control form-control-lg"
+                value="Anna Doe" />
+              <label class="form-label" for="formControlLgXsd">Nombre del tarjetahabiente</label>
+            </div>
+
+            <div class="row mb-4">
+              <div class="col-7">
+                <div class="form-outline">
+                  <input type="text" id="formControlLgXM" class="form-control form-control-lg"
+                    value="1234 5678 1234 5678" />
+                  <label class="form-label" for="formControlLgXM">Numero de tarjeta</label>
                 </div>
               </div>
-              <hr>
-              <div class="row">
-                <div class="col-sm-3">
-                  <p class="mb-0">Direccion</p>
+              <div class="col-3">
+                <div class="form-outline">
+                  <input type="password" id="formControlLgExpk" class="form-control form-control-lg"
+                    placeholder="MM/YYYY" />
+                  <label class="form-label" for="formControlLgExpk">Expira</label>
                 </div>
-                <div class="col-sm-9">
-                  <p class="text-muted mb-0">      </p>
+              </div>
+              <div class="col-2">
+                <div class="form-outline">
+                  <input type="password" id="formControlLgcvv" class="form-control form-control-lg"
+                    placeholder="Cvv" />
+                  <label class="form-label" for="formControlLgcvv">Cvv</label>
                 </div>
               </div>
             </div>
-          </div>
-            </div>
-          </div>
+
+            <button class="btn btn-success btn-lg btn-block">Agregar tarjeta</button>
+          </form>
         </div>
       </div>
     </div>
-  </section>
-  <!-- end blog section -->
+  </div>
+</section>
+
+
+  <!--end furniture section-->
 
   <!-- info section -->
   <section class="info_section long_section">
@@ -320,4 +297,3 @@
 </body>
 
 </html>
-
